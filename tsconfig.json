@@ -1,0 +1,31 @@
+{
+  "ts-node": {
+    "esm": true,
+    "experimentalSpecifierResolution": "node"
+  },
+  "compilerOptions": {
+    "allowJs": true,
+    "alwaysStrict": true,
+    "noImplicitAny": false,
+    "skipLibCheck": true,
+    "esModuleInterop": true,
+    "strictNullChecks": false,
+    "noImplicitReturns": false,
+    "allowUnreachableCode": false,
+    "experimentalDecorators": true,
+    "emitDecoratorMetadata": true,
+    "target": "ES2021",
+    "rootDirs": ["src", "."],
+    "lib": ["ESNext"],
+    "outDir": "dist",
+    "sourceMap": true,
+    "removeComments": false,
+    "preserveConstEnums": true,
+    "jsx": "react",
+    "pretty": true,
+    "module": "ESNext",
+    "moduleResolution": "node"
+  },
+  "exclude": ["node_modules"],
+  "include": ["/**/*.ts"]
+}
