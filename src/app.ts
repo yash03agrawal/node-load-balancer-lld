@@ -1,5 +1,5 @@
 import express from 'express';
-import { ErrorHandler } from './errorhandler';
+import { ErrorHandler } from './errorHandler';
 import LoadBalancerFactory from './loadBalancerFactory/loadBalancerFactory';
 import Server, { TServer } from './server/server';
 import ServerBuilder from './server/serverBuilder';

@@ -6,7 +6,8 @@
   "type": "module",
   "scripts": {
     "start": "nodemon src/appStart.ts",
-    "test": "jest"
+    "test": "jest --detectOpenHandles --forceExit",
+    "test:watch": "jest --detectOpenHandles --watch"
   },
   "author": "",
   "license": "ISC",

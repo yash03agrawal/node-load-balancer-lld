@@ -24,7 +24,7 @@ export default class ServerBuilder {
   };
 
   setIsRegistered = (isRegistered: boolean): ServerBuilder => {
-    if (isRegistered !== undefined || isRegistered !== null) this.isRegistered = isRegistered;
+    if (isRegistered !== undefined && isRegistered !== null) this.isRegistered = isRegistered;
     return this;
   };
 

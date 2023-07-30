@@ -12,12 +12,12 @@ export default abstract class AbstractLoadBalancer implements ILoadBalancer {
   }
 
   registerServer = (server: Server): void => {
-    if (this.registeredServers.size >= this.capacity) {
-      throw new Error('max capacity for servers has reached');
-    }
-
     if (server.isRegistered) {
       throw new Error('server is already registered');
+    }
+
+    if (this.registeredServers.size >= this.capacity) {
+      throw new Error('max capacity for servers has reached');
     }
 
     server.isRegistered = true;
@@ -33,12 +33,16 @@ export default abstract class AbstractLoadBalancer implements ILoadBalancer {
       }
     }
 
-    if (!server.isRegistered) {
+    if (!server?.isRegistered) {
       throw new Error('server is not registered');
     }
 
     server.isRegistered = false;
     this.registeredServers.delete(server);
+  };
+
+  getRegisteredServers = (): Set<Server> => {
+    return this.registeredServers;
   };
 
   protected checkForServers = (next: NextFunction) => {

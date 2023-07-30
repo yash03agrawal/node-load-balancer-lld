@@ -5,6 +5,7 @@
   },
   "compilerOptions": {
     "allowJs": true,
+    "checkJs": true,
     "alwaysStrict": true,
     "noImplicitAny": false,
     "skipLibCheck": true,
